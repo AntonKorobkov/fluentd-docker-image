@@ -14,6 +14,8 @@ RUN apk --no-cache --update add \
     echo 'gem: --no-document' >> /etc/gemrc && \
     gem install oj && \
     gem install fluentd -v 0.12.29 && \
+    gem install fluent-plugin-mongo && \
+    gem install fluent-plugin-grep && \
     apk del build-base ruby-dev && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /usr/lib/ruby/gems/*/cache/*.gem
 
